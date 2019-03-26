@@ -65,11 +65,3 @@ export default connect(
   mapStateToProps,
   actions
 )(App);
-
-// const INITIAL_STATE = {
-//   currentVal: '0',
-//   prevVal: '0',
-//   formula: '',
-//   currentSign: 'pos',
-//   lastClicked: ''
-// }

@@ -25,7 +25,8 @@ const reducer = (state=INITIAL_STATE, action) => {
       }
     }
     case EVALUATE: {
-      const result = eval(state.formula).toString()
+      const result = 
+        (Math.round(1000000000000 * eval(state.formula)) / 1000000000000).toString();
       return {
         ...state,
         currentVal: result,
@@ -42,7 +43,7 @@ const reducer = (state=INITIAL_STATE, action) => {
           formula: state.formula + '.'
         }
       }
-      else break;
+      else return state;
     }
 
     case CLEAR: return INITIAL_STATE;
